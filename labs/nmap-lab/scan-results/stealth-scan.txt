@@ -1,0 +1,10 @@
+# Nmap 7.99 scan initiated Sat May 16 04:50:31 2026 as: /usr/lib/nmap/nmap --privileged -sS -oN scan-results/stealth-scan.txt 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000070s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+8080/tcp open  http-proxy
+
+# Nmap done at Sat May 16 04:50:31 2026 -- 1 IP address (1 host up) scanned in 0.19 seconds

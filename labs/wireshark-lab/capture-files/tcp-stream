@@ -1,0 +1,24 @@
+GET / HTTP/1.1
+Host: example.com
+User-Agent: curl/8.19.0
+Accept: */*
+
+
+HTTP/1.1 200 OK
+Date: Sun, 17 May 2026 19:28:29 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+Last-Modified: Thu, 14 May 2026 05:31:28 GMT
+Allow: GET, HEAD
+Accept-Ranges: bytes
+Age: 6852
+cf-cache-status: HIT
+CF-RAY: 9fd5068699133977-MAA
+
+210
+<!doctype html><html lang="en"><head><title>Example Domain</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style></head><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p><p><a href="https://iana.org/domains/example">Learn more</a></p></div></body></html>
+
+0
+

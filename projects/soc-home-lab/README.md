@@ -128,7 +128,7 @@ Each report documents relevant incident details, detection logic, available evid
 ## MITRE ATT&CK Mapping
 
 |# |	Rule / Activity	                       | Technique              	                      | Tactic              |
----------------------------------------------------------------------------------------------------------------------
+|--|-----------------------------------------|------------------------------------------------|---------------------|
 |1 |  Repeated Failed Login Attempts	       | T1110 – Brute Force	                          | Credential Access   |
 |2 |  Nmap Reconnaissance	                   | T1046 – Network Service Discovery              | Discovery	          |
 |3 |	PowerShell Execution	                 | T1059.001 – PowerShell	                        | Execution           |

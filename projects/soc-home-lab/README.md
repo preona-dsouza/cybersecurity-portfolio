@@ -3,19 +3,19 @@
 
 ## Overview
 
-This project demonstrates the  implementation of a Security Operations Center (SOC) Home Lab built to practice security monitoring, threat detection, threat hunting and incident investigation and reporting using Splunk Enterprise, Sysmon, and Windows event logs.
+This project documents a Security Operations Center (SOC) Home Lab built to practice security monitoring, threat detection, threat hunting and incident investigation and reporting using Splunk Enterprise, Sysmon, and Windows event logs.
 
-The project endpoint telemetry collection, log analysis, security-event investigation, detection-rule development, and incident reporting. 
-Security related activities were stimulated in VM lab environment, and resulting evidence was documented to develop practical SOC investigation skills.
+The project covers endpoint telemetry collection, log analysis, security-event investigation, detection-rule development, and incident reporting. 
+Security-related activities were simulated in VM lab environment, and resulting evidence was documented to develop practical SOC investigation skills.
 
 ---
 
 ## Objectives
 
 * Build and document a virtual SOC lab environment.
-* Collect windows endpoint telemetry using Sysmon.
+* Collect Windows endpoint telemetry using Sysmon.
 * Ingest and investigate security events using Splunk Enterprise.
-* Simulate controlled security related activity.
+* Simulate controlled security-related activity.
 * Perform threat hunting and log analysis.
 * Develop SPL searches for security monitoring and detection.  
 * Document investigation findings and recommendations in incident reports.
@@ -26,10 +26,10 @@ Security related activities were stimulated in VM lab environment, and resulting
 
 | Component              | Purpose                                            |
 | ---------------------- | -------------------------------------------------- |
-| Kali Linux             | Lab machine  for controlled security testing       |
+| Kali Linux             | Lab machine for controlled security testing        |
 | Windows 10             | Target endpoint generating Windows security events |
-| Sysmon                 | Endpoint Telemetry collection                      |
-| Splunk Enterprise      | SIEM Platform for log searching and investigation  |
+| Sysmon                 | Endpoint telemetry collection                      |
+| Splunk Enterprise      | SIEM platform for log searching and investigation  |
 | Oracle VirtualBox      | Virtualization                                     |
 | Virtual networking     | Lab component connectivity                         |
 
@@ -46,11 +46,11 @@ Documented the virtual lab environment, including the Windows endpoint, Kali Lin
 
 ### 2. Log Management
 Configured endpoint telemetry collection and investigated Windows and Sysmon events using Splunk.
-* Sysmon instalation and deployment
-* Windows Event Logs collection 
+* Sysmon installation and deployment
+* Windows Event Log collection 
 * Splunk Enterprise setup and log ingestion 
 * Initial event-ingestion validation 
-sysmon installed into windows system to collect endpoint telementry and configured  splunk to ingest abd analyze logs
+
 
 ### 3. Attack Simulation
 
@@ -67,8 +67,8 @@ These activities provide investigation scenarios; the presence of an event alone
 ### 4. Threat Hunting
 
 Investigated Windows and Sysmon telemetry using event identifiers and Splunk searches.
-* Failed Authentication Events (Event ID: 4625)
-* Successful Login Events(Event ID: 4624)
+* Failed Authentication Events (Event ID 4625)
+* Successful Logon Events(Event ID 4624)
 * DNS Queries (Sysmon Event ID 22)
 * Network Connections (Sysmon Event ID 3)
 * Process Creation Events (Sysmon Event ID 1)
@@ -125,17 +125,31 @@ Each report documents relevant incident details, detection logic, available evid
 
 ---
 
+## MITRE ATT&CK Mapping
+
+|# |	Rule / Activity	                       | Technique              	                      | Tactic              |
+---------------------------------------------------------------------------------------------------------------------
+|1 |  Repeated Failed Login Attempts	       | T1110 – Brute Force	                          | Credential Access   |
+|2 |  Nmap Reconnaissance	                   | T1046 – Network Service Discovery              | Discovery	          |
+|3 |	PowerShell Execution	                 | T1059.001 – PowerShell	                        | Execution           |
+|4 |	Suspicious Process / System Discovery	 | T1082 – System Information Discovery	          | Discovery           |
+
+Note: These are potential technique mappings based on the documented lab activities, not confirmation of malicious activity.
+---
+
+
 ## Repository Structure
 
 ```
-SOC-Home-Lab
-│
-├── 01-Architecture
-├── 02-Log-Management
-├── 03-Attack-Simulation
-├── 04-Threat-Hunting
-├── 05-Detection-Engineering
-├── 06-Incident-Reports
+soc-home-lab/
+├── 01-architecture/
+├── 02-log-analysis/
+├── 03-attack-simulation/
+├── 04-threat-hunting/
+├── 05-Detection-engineering/
+├── 06-incident-report/
+├── screenshots/
+└── README.md
 
 ```
 

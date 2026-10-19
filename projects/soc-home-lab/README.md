@@ -5,9 +5,11 @@
 
 This project documents a Security Operations Center (SOC) Home Lab built to practice security monitoring, threat detection, threat hunting and incident investigation and reporting using Splunk Enterprise, Sysmon, and Windows event logs.
 
-The project covers endpoint telemetry collection, log analysis, security-event investigation, detection-rule development, and incident reporting. 
-Security-related activities were simulated in VM lab environment, and resulting evidence was documented to develop practical SOC investigation skills.
+The goal was to gain practical experience with log collection, threat detection, threat hunting, and incident investigation using industry-standard tools. Throughout the project,
+I generated security events, analyzed logs, created detection rules, and documented investigations to better understand day-to-day SOC operations.
 
+The project covers endpoint telemetry collection, log analysis, security-event investigation, detection-rule development, and incident reporting.
+Security-related activities were simulated in VM lab environment, and resulting evidence was documented to develop practical SOC investigation skills.
 ---
 
 ## Objectives
@@ -17,11 +19,14 @@ Security-related activities were simulated in VM lab environment, and resulting 
 * Ingest and investigate security events using Splunk Enterprise.
 * Simulate controlled security-related activity.
 * Perform threat hunting and log analysis.
-* Develop SPL searches for security monitoring and detection.  
+* Develop SPL searches for security monitoring and detection.
 * Document investigation findings and recommendations in incident reports.
 
 ---
 
+
+![SOC Lab Architecture](01-architecture/Diagrams/Architecture-diagram.png)
+---
 ## Lab Environment
 
 | Component              | Purpose                                            |
@@ -35,21 +40,36 @@ Security-related activities were simulated in VM lab environment, and resulting 
 
 ---
 
+## Data Flow
+
+```mermaid
+flowchart TD
+    A[Kali Linux] -->|Attack simulation| B[Windows Endpoint]
+    B --> C[Sysmon and Windows Event Logs]
+    C --> D[Splunk Universal Forwarder]
+    D -->|TCP 9997, if configured| E[Splunk Enterprise]
+    E --> F[Search and Detection Rules]
+    F --> G[Investigation and Incident Reporting]
+```
+
+> Verify the forwarding method and port against your actual lab configuration.
+
+---
 ## Project Workflow
 
 ### 1. SOC Architecture
-Documented the virtual lab environment, including the Windows endpoint, Kali Linux machine, virtualization platform, and networking setup.
-* Architecture documentation
-* Virtual machine connectivity
-* Network configuration 
-  
+The lab uses a Windows endpoint to generate security telemetry, Sysmon and Windows Event Logs as data sources, Splunk Enterprise for centralized analysis, and Kali Linux for controlled security testing.
+* Virtual machine architecture and connectivity
+* Lab network configuration
+* Endpoint-to-SIEM log collection
+
 
 ### 2. Log Management
 Configured endpoint telemetry collection and investigated Windows and Sysmon events using Splunk.
 * Sysmon installation and deployment
-* Windows Event Log collection 
-* Splunk Enterprise setup and log ingestion 
-* Initial event-ingestion validation 
+* Windows Event Log collection
+* Splunk Enterprise setup and log ingestion
+* Initial event-ingestion validation
 
 
 ### 3. Attack Simulation
@@ -77,7 +97,7 @@ Investigated Windows and Sysmon telemetry using event identifiers and Splunk sea
 
 ### 5. Detection Engineering
 
-Developed and documented Splunk searches for selected endpoint security use cases.  
+Developed and documented Splunk searches for selected endpoint security use cases.
 
 #### Repeated Authentication Failures
 
@@ -112,7 +132,7 @@ Each report documents relevant incident details, detection logic, available evid
 
 ## Skills Demonstrated
 
-* Splunk SIEM and SPL searches 
+* Splunk SIEM and SPL searches
 * Windows Security Event Log analysis
 * Sysmon telemetry investigation
 * Authentication-event analysis

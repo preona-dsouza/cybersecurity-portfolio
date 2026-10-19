@@ -1,7 +1,6 @@
 
 
 # Purpose : Investigate DNS requests.
-3
 
 ## Step 1 — Generate Network Traffic
 

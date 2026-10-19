@@ -2,6 +2,8 @@
 
 # Splunk Installation and Log Ingestion
 
+## Splunk Enterprise SOC Lab Setup
+
 ## Objective
 
 Deploy Splunk Enterprise as the central SIEM platform for log collection, investigation, and detection engineering.
@@ -41,9 +43,19 @@ net stop splunkd
 net start splunkd
 
 
-Screenshot:
+Configure Splunk Universal Forwarder
 
+splunk add forward-server
+
+splunk restart
+
+splunk list forward-server
+
+
+Screenshot:
+splunk-installation.png
 splunk-login.png
+splunk-verification.png
 
 ## Configuration
 

@@ -13,7 +13,7 @@ Date- 31/05/2026 18:27
 
 ##  Detection Source
 
-Splunk Detection Rule – Brute forcec Alert
+Splunk Detection Rule – Brute Force Alert
 
 ```
 index=* EventCode=4625 

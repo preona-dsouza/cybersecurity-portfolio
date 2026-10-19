@@ -94,12 +94,12 @@ If ping works but DNS fails:
 ```bash
 sudo nano /etc/resolv.conf
 ```
-##Purpose:
+## Purpose:
 - Modify DNS server settings
 
 
 Add:
-##replace content with
+## replace content with
 
 ```text
 nameserver 8.8.8.8
@@ -112,7 +112,7 @@ nameserver 1.1.1.1
 | 8.8.8.8    | Google DNS     |
 | 1.1.1.1    | Cloudflare DNS |
 
-##Purpose:
+## Purpose:
 - Configure public DNS servers
 
 
@@ -125,7 +125,7 @@ nameserver 1.1.1.1
 sudo systemctl restart NetworkManager
 ```
 
-##Purpose:
+## Purpose:
 - Apply updated DNS settings
 
 ---
@@ -200,7 +200,7 @@ curl http://example.com
 telnet google.com 80
 ```
 
-##Purpose:
+## Purpose:
 - Generate TCP connection traffic
 
 ---
@@ -253,7 +253,7 @@ nmap 10.0.2.4
 tcp.flags.syn == 1 && tcp.flags.ack == 0
 ```
 
-##Purpose:
+## Purpose:
 - Identify SYN packets
 - Detect connection initiation
 - Detect potential scans
@@ -306,7 +306,7 @@ Shows traffic on port 80.
 ip.src == 10.0.2.15
 ```
 
-##Purpose:
+## Purpose:
 - Show packets from source IP
 
 ---
@@ -318,7 +318,7 @@ ip.dst == 10.0.2.4
 ```
 
 
-##Purpose:
+## Purpose:
 - Show packets to destination IP
 
 
@@ -330,7 +330,7 @@ ip.dst == 10.0.2.4
 ip.addr == 10.0.2.4
 ```
 
-##Purpose:
+## Purpose:
 - Show traffic involving specified IP
 
 
@@ -353,7 +353,7 @@ Purpose:
 ip.addr == 10.0.2.4 && tcp.port == 80 && http.request
 ```
 
-##Purpose:
+## Purpose:
 - Show HTTP requests for specific IP on port 80
 
 ---

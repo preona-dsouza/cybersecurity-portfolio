@@ -1,6 +1,6 @@
 
 
-###Splunk Installation and Lof Ingestion 
+###Splunk Installation and Lof Ingestion
 
 # Splunk Enterprise SOC Lab Setup
 
@@ -43,9 +43,19 @@ net stop splunkd
 net start splunkd
 
 
-Screenshot:
+Configure Splunk Universal Forwarder
 
+splunk add forward-server
+
+splunk restart
+
+splunk list forward-server
+
+
+Screenshot:
+splunk-installation.png
 splunk-login.png
+splunk-verification.png
 
 ## Configuration
 

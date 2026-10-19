@@ -5,7 +5,7 @@
 
 This project demonstrates the  implementation of a Security Operations Center (SOC) Home Lab for  security monitoring, threat detection, investigation, and incident reporting.
 
-The goal was to gain practical experience with log collection, threat detection, threat hunting, and incident investigation using industry-standard tools. Throughout the project, 
+The goal was to gain practical experience with log collection, threat detection, threat hunting, and incident investigation using industry-standard tools. Throughout the project,
 I generated security events, analyzed logs, created detection rules, and documented investigations to better understand day-to-day SOC operations.
 
 ---
@@ -22,6 +22,9 @@ I generated security events, analyzed logs, created detection rules, and documen
 
 ---
 
+
+![SOC Lab Architecture](01-architecture/Diagrams/Architecture-diagram.png)
+---
 ## Lab Environment
 
 | Component              | Purpose            |
@@ -35,21 +38,36 @@ I generated security events, analyzed logs, created detection rules, and documen
 
 ---
 
+## Data Flow
+
+```mermaid
+flowchart TD
+    A[Kali Linux] -->|Attack simulation| B[Windows Endpoint]
+    B --> C[Sysmon and Windows Event Logs]
+    C --> D[Splunk Universal Forwarder]
+    D -->|TCP 9997, if configured| E[Splunk Enterprise]
+    E --> F[Search and Detection Rules]
+    F --> G[Investigation and Incident Reporting]
+```
+
+> Verify the forwarding method and port against your actual lab configuration.
+
+---
 ## Project Workflow
 
 ### 1. SOC Architecture
 Created a virtual lab environment consisting of a Windows endpoint, a Kali Linux attacker machine, and Splunk Enterprise for centralized log collection and analysis.
 * Virtualized SOC environment
-* Network connectivity 
+* Network connectivity
 * Architecture documentation
 
 ### 2. Log Management
 
-* Sysmon instalation and deployment
-* Windows Event Logs collection 
+* Sysmon installation and configuration
+* Windows Event Logs collection
 * Splunk installation and configuration
-* Log ingestion validation 
-sysmon installed into windows system to collect endpoint telementry and configured  splunk to ingest abd analyze logs
+* Log ingestion validation
+sysmon installed into windows system to collect endpoint telemetry  and configured  splunk to ingest and analyze logs
 
 ### 3. Attack Simulation
 

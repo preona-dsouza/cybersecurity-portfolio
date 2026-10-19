@@ -139,7 +139,7 @@ sudo nano /etc/resolv.conf
 nameserver 8.8.8.8
 nameserver 1.1.1.1
 ```
-##Purpose
+## Purpose
 - Configure public DNS servers
 
 ---
@@ -183,7 +183,7 @@ Wireshark began displaying DNS traffic correctly.
 ```bash
 curl http://example.com
 ```
-#Purpose
+# Purpose
 - Generate HTTP GET requests
 
 ## Wireshark Filter
@@ -191,7 +191,7 @@ curl http://example.com
 ```text
 http
 ```
-##Purpose
+## Purpose
 -Display HTTP traffic only
 
 
@@ -218,7 +218,7 @@ View full HTTP conversation.
 telnet google.com 80
 ```
 
-##Purpose:
+## Purpose:
 - Generate TCP connection traffic
 
 
@@ -228,7 +228,7 @@ telnet google.com 80
 tcp
 ```
 
-##Purpose:
+## Purpose:
 - Display TCP traffic only
 
 

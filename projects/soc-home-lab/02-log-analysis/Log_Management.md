@@ -1,11 +1,11 @@
 
 # 02 - Log Management (Sysmon Setup)
 
-##Objective
+## Objective
 Set up endpoint logging using Sysmon so that all system activities can be monitored and analyzed in a SOC environment.
 
 
-##Purpose:
+## Purpose:
 Sysmon captures detailed endpoint telemetry useful for SOC investigations and threat hunting
 
 It helps SOC analysts detect:
@@ -20,7 +20,7 @@ PowerShell activity
 Suspicious command execution
 
 
-##Step 1 — Install Sysmon
+## Step 1 — Install Sysmon
 
 Download: Sysmon  ( windows VM --> Open Administrator CMD)
 
@@ -37,7 +37,7 @@ Run:
 
 output:  STATE: RUNNING
 
-#Verify
+######### Verify
 
 Open:Event Viewer
 
@@ -46,7 +46,7 @@ Go: Applications and Services Logs → Microsoft → Windows → Sysmon → Oper
 If logs appear, installation succeeded.
 
 
-##Step 2 — Install Better Config
+## Step 2 — Install Better Config
 
 Download:SwiftOnSecurity Sysmon Config   ( windows VM --> Open Administrator CMD) 
 
@@ -57,7 +57,7 @@ sysmon64.exe -i sysmonconfig-export.xml
 
 ```
 
-##Step 3: Verify Logs in Event Viewer
+## Step 3: Verify Logs in Event Viewer
 
 Path:
 Applications and Services Logs → Microsoft → Windows → Sysmon → Operational
@@ -74,11 +74,11 @@ Event ID     Meaning
 16           Sysmon Configuration Change
 22           DNS Query
 
-##Evidence - screenshots
+## Evidence - screenshots
 - sc-query.png
 - event-viwer.png
 
-##SOC Relevance
+## SOC Relevance
 
 Sysmon helps detect:
 - Malware execution

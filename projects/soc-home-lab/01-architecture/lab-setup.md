@@ -6,7 +6,7 @@
 Build a SOC Home Lab that is capable of  generating, collecting, detecting, and investigating security events.
 
 
-#Environment:
+# Environment:
 
 Attacker:
 Kali Linux

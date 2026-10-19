@@ -27,7 +27,7 @@ index=* EventCode=4625
 
 ## Alert Configuration
 Type: Scheduled
-Severity: Medoium
+Severity: Medium
 Condition: count > 5
 Time Range: Last 1 hour.
 ---

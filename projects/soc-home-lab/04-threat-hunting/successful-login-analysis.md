@@ -22,7 +22,7 @@ In splunk:
 EventCode=4624
 ```
 
-##Event Description
+## Event Description
 Event ID 4624 indicates a successfull authentication.
 
 | Event code     | Meaning           |
@@ -30,7 +30,7 @@ Event ID 4624 indicates a successfull authentication.
 | 4624           | successful login  |
 
 
-##Findings
+## Findings
 - Successfully authenticated users observed.
 - Correlated successful logins with failed login events.
 

@@ -16,7 +16,7 @@ ICMP traffic is commonly used for:
 
 ## DNS Analysis
 
-###Oberservation
+### Observation
 -Initial DNS traffic was not visible and domain resolution failed.
 -Investigation Performed
 - Network connection operational
@@ -24,7 +24,7 @@ ICMP traffic is commonly used for:
 -Edited DNS configuration
 -Restart Network Services 
 
-###Result
+### Result
 - DNS resolution successfully restored.
 - DNS packets visible in Wireshark
 - Observed successful DNS queries to google.com
@@ -34,12 +34,12 @@ ICMP traffic is commonly used for:
 
 ## HTTP Analysis
 
-###Observed
+### Observed
 - HTTP traffic visible in plaintext
 -HTTP traffic was successfully captured.
 - GET requests,Host headers,HTTP responses  successfully identified
 
-###Result
+### Result
 HTTP traffic is transmitted in plaintext and may expose sensitive information.
 
 ## TCP Handshake
@@ -48,24 +48,24 @@ HTTP traffic is transmitted in plaintext and may expose sensitive information.
 -TCP three-way handshake packets successfully identified.
 - SYN → SYN ACK → ACK sequence observed
 
-###Result
+### Result
 TCP handshake establishes reliable communication between systems.
 
 
 ## Nmap Detection
 
-###Observed
+### Observed
 - Multiple SYN packets detected
 - Sequential port access identified
 -Large numbers of SYN packets observed targeting multiple ports.
 - Possible reconnaissance activity observed
 
-###Result
+### Result
 Behavior consistent with reconnaissance or port scanning activity.
 
 ### Wireshark Filters
 
-###Result
+### Result
 Filters reduce noise and improve investigation efficiency.
 
 

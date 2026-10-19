@@ -55,7 +55,7 @@ SOC use this heavily for:
 - threat hunting
 
 
-# Filter Process Termination
+##### Filter Process Termination
 
 Run:
 
@@ -66,7 +66,7 @@ Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" | Where-Object {$_.
 Purpose : Shows only Event ID 2 - Process terminated 
 
 
-# Filter  Network Connections
+##### Filter  Network Connections
 
 Run: 
 
@@ -89,7 +89,7 @@ Tracks:
 - Unauthorized external connections
 
 
-#Filter DNS Query Analysis
+##### Filter DNS Query Analysis
 
 ```
 Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" | Where-Object {$_.Id -eq 22}
@@ -112,7 +112,7 @@ SOC analysts use for:
 
 
 
-# Filter Failed Login
+##### Filter Failed Login
 
 Run
 
@@ -132,7 +132,7 @@ SOC Use:
 
 
 
-# Filter  Successful Logins
+##### Filter  Successful Logins
 
 Run
 ```
@@ -141,7 +141,7 @@ Get-WinEvent -FilterHashtable @{LogName='Security'; ID=4624}
 Purpose: Show successful logins
 
 
-# Filter  Process Creation (4688)
+##### Filter  Process Creation (4688)
 
 Run:
 
@@ -165,7 +165,7 @@ Soc Analysts use it to detect:
 - Show Windows process execution logs
 
 
-# View Processes
+##### View Processes
 
 Run:
 ```
@@ -175,7 +175,7 @@ Purpose: Show all running processes
 
 
 
-# Find Running Services Only
+##### Find Running Services Only
 
 Run:
 

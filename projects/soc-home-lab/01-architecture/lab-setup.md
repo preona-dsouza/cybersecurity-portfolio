@@ -7,7 +7,7 @@ Build a SOC Home Lab that is capable of  generating, collecting, detecting, and 
 
 ![Architecture](Diagrams/Architecture-diagram.png)
 
-#Environment:
+# Environment:
 
 Attacker:
 Kali Linux

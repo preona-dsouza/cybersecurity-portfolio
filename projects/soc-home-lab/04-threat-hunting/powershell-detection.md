@@ -2,7 +2,7 @@
 # PowerShell Execution Detection
 
 
-##Purpose
+## Purpose
 Identify PowerShell execution.
 
 
@@ -12,12 +12,12 @@ Identify PowerShell execution.
 EventCode=4688 powershell
 ```
 
-##Findings
+## Findings
 
 PowerShell execution was successfully detected.
 
 
-##SOC Relevance
+## SOC Relevance
 
 PowerShell is frequently abused by attackers for execution and post-exploitation activities.
 - malware execution

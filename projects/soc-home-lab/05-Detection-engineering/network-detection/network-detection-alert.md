@@ -57,7 +57,7 @@ Repeated connection attempts to destination ports may indicate:
 
 ---
 
-##SOC Relevance
+## SOC Relevance
 
 This rule provides visibility into potential reconnaissance activities occurring within the environment. 
 Port scanning is often an early stage of an attack lifecycle, where adversaries attempt to identify exposed services and potential attack vectors.

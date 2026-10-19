@@ -1,8 +1,8 @@
 
 
-###Splunk Installation and Lof Ingestion
+# Splunk Installation and Log Ingestion
 
-# Splunk Enterprise SOC Lab Setup
+## Splunk Enterprise SOC Lab Setup
 
 ## Objective
 
@@ -26,7 +26,7 @@ Deploy Splunk Enterprise as the central SIEM platform for log collection, invest
 
 
 
-##Install Splunk
+## Install Splunk
 
 
 Install:Splunk Enterprise
@@ -68,7 +68,7 @@ Enabled:
 - Application Logs
 - Sysmon Operational Logs
 
-#Log Ingestion
+# Log Ingestion
 
 
 In Splunk: Settings → Add Data -> Monitor ->  Local Event Logs
@@ -102,6 +102,6 @@ Logs were successfully ingested into Splunk.
 - authentication activity
 
 
-##SOC Relevance
+## SOC Relevance
 
 SIEM platforms provide centralized visibility into endpoint and network activity.

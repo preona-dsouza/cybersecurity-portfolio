@@ -51,16 +51,16 @@ Event ID 4625 indicates a failed authentication attempt.
 
 ---
 
-##Findings
+## Findings
 Observed multiple failed logins targeting local accounts.
 
-##Potential causes:
+## Potential causes:
 - User error
 - Password spraying
 - Brute force attack
 
 
-##SOC Relevance
+## SOC Relevance
 Repeated authentication failures are often early indicators of credential attacks.
 
 Soc Investigation:

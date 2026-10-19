@@ -1,11 +1,11 @@
 
 
-##Attack 1 — Nmap Scan
+## Attack 1 — Nmap Scan
 Simulate attacker reconnaissance activity using Nmap and understand how attackers identify systems and services on a network.
 
 
 
-# Environment
+### Environment
 
 | Component        | Details          |
 |------------------|------------------|
@@ -14,7 +14,7 @@ Simulate attacker reconnaissance activity using Nmap and understand how attacker
 | Tool Used        | Nmap             |
 
 
-#Step 1 — Find Windows IP
+### Step 1 — Find Windows IP
 
 On Windows VM:
 
@@ -26,7 +26,7 @@ Find:
 
 IPv4 Address
 
-#Step 2 - Attack using Nmap
+### Step 2 — Attack Using Nmap
 
 From Kali:
 
@@ -55,18 +55,18 @@ The scan attempted to identify:
 - Potential attack surface
 
 
-#Finding
+### Finding
 
 PORT
 STATE
 SERVICE
 
-#Output - screenshot
+### Output — Screenshot
 -  nmap-attack.png
 
 
 
-##SOC Relevance:
+## SOC Relevance:
 
 Scanning may indicate reconnaissance activity.
 

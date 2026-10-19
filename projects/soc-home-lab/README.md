@@ -5,11 +5,11 @@
 
 This project documents a Security Operations Center (SOC) Home Lab built to practice security monitoring, threat detection, threat hunting and incident investigation and reporting using Splunk Enterprise, Sysmon, and Windows event logs.
 
-The goal was to gain practical experience with log collection, threat detection, threat hunting, and incident investigation using industry-standard tools. Throughout the project,
-I generated security events, analyzed logs, created detection rules, and documented investigations to better understand day-to-day SOC operations.
+The goal was to gain practical experience with log collection, threat detection, threat hunting, and incident investigation using industry-standard tools. Throughout the project, I generated security events, analyzed logs, created detection rules, and documented investigations to better understand day-to-day SOC operations.
 
 The project covers endpoint telemetry collection, log analysis, security-event investigation, detection-rule development, and incident reporting.
-Security-related activities were simulated in VM lab environment, and resulting evidence was documented to develop practical SOC investigation skills.
+Security-related activities were simulated in VM lab environment, and resulting evidence was documented to develop practical SOC investigation skills
+
 ---
 
 ## Objectives
